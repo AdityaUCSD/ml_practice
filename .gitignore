@@ -1,0 +1,9 @@
+#ignore folders
+.ipynb_checkpoints/
+data/
+mnist/DeepLearningPython/
+mnist/model/
+results/
+*.venv/
+*__pycache__*
+.DS_Store

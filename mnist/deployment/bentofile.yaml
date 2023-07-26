@@ -1,0 +1,12 @@
+service: "service:mnist_service"
+
+labels:
+  owner: Aditya Srinivasan
+  stage: dev
+include:
+  - "*.py"
+python:
+  packages:
+    - torch
+    - numpy
+    - matplotlib
