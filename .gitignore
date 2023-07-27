@@ -1,6 +1,6 @@
 #ignore folders
 .ipynb_checkpoints/
-data/
+data/*/
 mnist/DeepLearningPython/
 mnist/model/
 results/

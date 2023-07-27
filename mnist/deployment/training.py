@@ -114,7 +114,7 @@ def plot_examples(test_loader, network):
     plt.savefig('../figures/examples.png')
 
 if __name__ == "__main__":
-    data_file = '../DeepLearningPython/mnist.pkl.gz'
+    data_file = '../../data/mnist.pkl.gz'
     train_loader, validation_loader, test_loader = load_and_split_dataset(data_file)
 
     train_counter, train_losses = [], []
