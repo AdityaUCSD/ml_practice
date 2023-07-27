@@ -1,0 +1,25 @@
+BentoML handles the backend API creation of deploying a model as a service. 
+
+To try out this functionality locally:
+  1. Create and activate a virtual env:
+    # python3.10 -m venv .venv
+    # . .venv/bin/activate
+  2. Install requirements:
+    # pip3 install -r requirements.txt
+  3. Download MNIST pkl file: https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/data/mnist.pkl.gz
+      and place file in ml/data folder
+  4. Train and save model to bentoml
+    # python training.py
+    # python to_bento.py
+  5. Run the bentoml service locally from port 3000
+    # make bento_service_run
+    # python service_request.py
+    You can look into the ml/mnist/figures folder to see the image that was classified, 
+      the prediction and ground truth are printed to the terminal
+  6. Dockerize the bentoml service
+    # make bento_containerize
+  7. Run the docker image we created (it is also using port 3000 so either change that or close the bentoml service first)
+    # make docker_run
+  8. Send the request to the running docker image
+    # python service_request.py (change the port number on line #9 if it was modified in step 7)
+  9. Deploy the docker image to any cloud platform for scalability and high availability
